@@ -1,0 +1,409 @@
+			@font-face {
+			  font-family: "myFont";
+			  src: url("../fonts/AlternateGothicSB-NoTwo.eot?") format('eot'),
+			       url("../fonts/AlternateGothicSB-NoTwo.woff") format('woff'),
+			       url("../fonts/AlternateGothicSB-NoTwo.ttf")  format('truetype');
+			}
+			.myFontClass {
+			  font-family: "myFont";
+
+			}
+
+			html,body{
+				height: 100%;
+				font-family:"myFont", Helvetica,游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+			}
+			h1, h2, h3, h4, h5, h6,p,span{
+				color: #2d2d2d;
+		
+				font-weight:100;
+				text-align: center;
+			}
+			a{
+				color: black;
+				text-decoration: none;
+				display: inline-block;
+			}
+			img{
+				vertical-align: bottom;
+			}
+			figure{
+				margin: 0;
+			}
+
+			.fl_left{
+				float: left;
+			}
+			.fl_right{
+				float: right;
+			}
+			.clear{
+				overflow: hidden;
+				height:100%;
+			}
+			.fixed {
+			    position: fixed;
+			    top: 0;
+			    left: 0;
+			    width: 100%;
+			    z-index: 99;
+			}
+			#container .item {
+
+			    width: 33.3%;
+				position: relative;
+				margin: 0;
+			}
+
+			#container .item figure{
+				position: absolute;
+				opacity: 0;
+				top: 0;
+				left: 0;
+				z-index: 2;
+				width: 100%;
+				height: 100%;
+				background: rgba(0,0,0,.7);
+				-webkit-transition: .5s;
+				transition: .5s;
+				outline: 1px solid rgba(255,255,255,1);
+				outline-offset:-20px;
+				-webkit-transform: scale(0.5,0.5);
+			  	-ms-transform: scale(0.5,0.5);
+			  	transform: scale(0.5,0.5);
+			}
+			#container .item:hover figure{
+				opacity:1;
+				-webkit-transform: scale(1,1);
+				-ms-transform: scale(1,1);
+				transform: scale(1,1);
+			}
+			#container .item figure a{
+				width: 100%;
+				height: 100%;
+				color: white;
+			}
+
+			#container .item figure .table{
+				display: table;
+				width: 100%;
+				height: 100%;
+			}
+
+			#container .item figure .tablecell{
+				display: table-cell;
+				vertical-align:middle;			
+				width: 100%;
+				height: 100%;				
+			}
+			#container .item figure .tablecell h4,
+			#container .item figure .tablecell p,
+			#container .item figure .tablecell p span{
+				color:white;
+				font-family:Helvetica,游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+			}
+			#container .item figure .tablecell p span{
+				font-size: 12px;
+			}
+			#container .item figure .tablecell hr{
+				width: 50%;
+				-webkit-transition: 1s;
+				transition: 1s;
+				-webkit-transform: scaleX(0);
+			  	-ms-transform: scaleX(0);
+			  	transform: scaleX(0);
+			}
+			#container .item:hover figure .tablecell hr{
+				-webkit-transform: scaleX(1);
+			  	-ms-transform: scaleX(1);
+			  	transform: scaleX(1);				
+			}
+
+
+			#container .item img{
+				width: 100%;
+			}
+
+			#wrap{
+				height: 100%;
+				min-width: 1000px;
+			}
+
+			.background-wrap{
+				position:relative;
+				z-index: -1000;
+				width: 100%;
+				height:100%;
+				overflow: hidden;
+				top:0;
+				left:0;
+			}
+
+			#video-bg-elem{
+				position: absolute;
+				top: 0;
+				left: 0;
+				min-width: 100%;
+				min-height: 100%;
+			}
+
+			#mobile-bg-elem{
+				position: absolute;
+				top: 0;
+				left: 0;
+				min-width: 100%;
+				min-height: 100%;
+				/* 画像ファイルの指定 */
+				  background-image: url(video.gif);
+
+				  /* 画像を常に天地左右の中央に配置 */
+				  background-position: center center;
+
+				  /* 画像をタイル状に繰り返し表示しない */
+				  background-repeat: no-repeat;
+
+				  /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
+				  background-attachment: fixed;
+
+				  /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+				  background-size: cover;
+
+				  /* 背景画像が読み込まれる前に表示される背景のカラー */
+				  background-color: #464646;
+			}
+
+			.contents{
+				position: absolute;
+				width: 100%;
+				min-height: 100%;
+				z-index: 1000;
+				background-image: url(../image/bgcover.png);
+				background-repeat: repeat;
+			}
+
+			.contents .bg_videotext{
+				position: absolute;
+				top: 25%;
+				width:100%;
+			}
+
+			#massage01{
+				font-size:70px;
+				color:white;
+				opacity: 0;
+				top:-10px;
+				position: relative;
+			}
+
+			.contents .arrow{
+				position: absolute;
+				bottom: 3%;
+				width:100%;
+				text-align: center;
+			}
+
+			.contents .arrow p{
+				font-size: 20px;
+				color:white;
+				letter-spacing: 4px;
+			}
+
+			.detail{
+				position: relative;
+				top:0;
+				left:0;
+			}
+			#pagetop{
+				width:100%;
+				background: white;
+				color: #FFF;
+				font-size: 28px;
+				transition: height 0.3s linear 0s, padding 0.3s linear 0s;
+				min-width: 1000px;
+				height: 70px;
+			}
+
+			#site-logo{
+				background: black;
+				padding:8px 0 3px; 
+				text-align: center;
+				color:white;
+				width: 200px;
+				margin-top: 16px;
+			}
+
+			#glovalmenu{
+				margin-top: 16px;
+			}
+
+			#glovalmenu ul{
+				padding:8px 0 3px;
+				color: black;
+			}
+
+			#glovalmenu ul li{
+				float: left;
+				padding: 0 40px;
+				border-left: 1px solid black;
+			}
+			#glovalmenu ul li:first-child{
+				padding: 0 40px 0 0;
+				border-left: none;
+			}
+			#glovalmenu ul li:last-child{
+				padding: 0 0 0 40px;
+			}
+
+			.menu,.aboutus{
+				padding: 0;
+				margin:0 auto;
+/*				text-align: center;
+				position: relative;*/
+			}
+			.menu{
+				width:90%;
+				min-width: 1000px;
+				height: 100%;
+			}
+
+
+
+
+
+
+/*ローディング*/
+#loader-bg {
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: white;
+  z-index: 100;
+
+}
+#loader {
+  display: block;
+  position: fixed;
+/*  top: 50%;
+  left: 50%;*/
+  width: 100%;
+  height: 100%;
+/*  margin-top: -100px;
+  margin-left: -100px;*/
+  text-align: center;
+  color: black;
+  z-index: 200;
+}
+#cssload-loader {
+/*	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	width: 88px;*/
+	width: 100%;
+	height: 100%;
+	display: table;
+}
+.tablecell{
+		width: 100%;
+		display: table-cell;
+		vertical-align: middle;
+}
+#cssload-loader ul {
+	margin: 0;
+	list-style: none;
+	width: 88px;
+	margin: 0 auto;
+	height: 63px;
+	position: relative;
+	padding: 0;
+/*	height: 200px;*/
+	z-index: 9999;
+
+}
+#cssload-loader ul li {
+	position: absolute;
+	width: 2px;
+	height: 0;
+	background-color: rgb(0,0,0);
+	bottom: 0;
+}
+
+
+#cssload-loader li:nth-child(1) {
+	left: 0;
+	animation: cssload-sequence1 1.15s ease infinite 0;
+		-o-animation: cssload-sequence1 1.15s ease infinite 0;
+		-ms-animation: cssload-sequence1 1.15s ease infinite 0;
+		-webkit-animation: cssload-sequence1 1.15s ease infinite 0;
+		-moz-animation: cssload-sequence1 1.15s ease infinite 0;
+}
+#cssload-loader li:nth-child(2) {
+	left: 15px;
+	animation: cssload-sequence2 1.15s ease infinite 0.12s;
+		-o-animation: cssload-sequence2 1.15s ease infinite 0.12s;
+		-ms-animation: cssload-sequence2 1.15s ease infinite 0.12s;
+		-webkit-animation: cssload-sequence2 1.15s ease infinite 0.12s;
+		-moz-animation: cssload-sequence2 1.15s ease infinite 0.12s;
+}
+#cssload-loader li:nth-child(3) {
+	left: 29px;
+	animation: cssload-sequence1 1.15s ease-in-out infinite 0.23s;
+		-o-animation: cssload-sequence1 1.15s ease-in-out infinite 0.23s;
+		-ms-animation: cssload-sequence1 1.15s ease-in-out infinite 0.23s;
+		-webkit-animation: cssload-sequence1 1.15s ease-in-out infinite 0.23s;
+		-moz-animation: cssload-sequence1 1.15s ease-in-out infinite 0.23s;
+}
+#cssload-loader li:nth-child(4) {
+	left: 44px;
+	animation: cssload-sequence2 1.15s ease-in infinite 0.35s;
+		-o-animation: cssload-sequence2 1.15s ease-in infinite 0.35s;
+		-ms-animation: cssload-sequence2 1.15s ease-in infinite 0.35s;
+		-webkit-animation: cssload-sequence2 1.15s ease-in infinite 0.35s;
+		-moz-animation: cssload-sequence2 1.15s ease-in infinite 0.35s;
+}
+#cssload-loader li:nth-child(5) {
+	left: 58px;
+	animation: cssload-sequence1 1.15s ease-in-out infinite 0.46s;
+		-o-animation: cssload-sequence1 1.15s ease-in-out infinite 0.46s;
+		-ms-animation: cssload-sequence1 1.15s ease-in-out infinite 0.46s;
+		-webkit-animation: cssload-sequence1 1.15s ease-in-out infinite 0.46s;
+		-moz-animation: cssload-sequence1 1.15s ease-in-out infinite 0.46s;
+}
+#cssload-loader li:nth-child(6) {
+	left: 73px;
+	animation: cssload-sequence2 1.15s ease infinite 0.58s;
+		-o-animation: cssload-sequence2 1.15s ease infinite 0.58s;
+		-ms-animation: cssload-sequence2 1.15s ease infinite 0.58s;
+		-webkit-animation: cssload-sequence2 1.15s ease infinite 0.58s;
+		-moz-animation: cssload-sequence2 1.15s ease infinite 0.58s;
+}
+
+
+@keyframes cssload-sequence1 {
+	0% {
+		height: 10px;
+	}
+	50% {
+		height: 49px;
+	}
+	100% {
+		height: 10px;
+	}
+}
+
+
+
+@keyframes cssload-sequence2 {
+	0% {
+		height: 19px;
+	}
+	50% {
+		height: 63px;
+	}
+	100% {
+		height: 19px;
+	}
+}
